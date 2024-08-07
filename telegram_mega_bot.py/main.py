@@ -61,7 +61,7 @@ def getMessage():
 @app.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://your-vercel-app-url.vercel.app/' + TELEGRAM_BOT_TOKEN)
+    bot.set_webhook(url='https://telegraam-fileuploader-e527y8vmq-harshdeep72s-projects.vercel.app' + TELEGRAM_BOT_TOKEN)
     return "!", 200
 
 if __name__ == "__main__":
