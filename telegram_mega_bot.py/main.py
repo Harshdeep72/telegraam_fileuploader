@@ -7,8 +7,8 @@ from flask import Flask, request
 TELEGRAM_BOT_TOKEN = os.environ['7298924629:AAGLM1sKKeDpsJXBfwGKW-ZW7PFNzkP6yAE']
 
 # MEGA account credentials
-MEGA_EMAIL = os.environ['MEGA_EMAIL']
-MEGA_PASSWORD = os.environ['MEGA_PASSWORD']
+MEGA_EMAIL = os.environ['nunislive@gmail.com']
+MEGA_PASSWORD = os.environ['32298@1wF']
 
 # Initialize the Telegram bot
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
@@ -61,7 +61,7 @@ def getMessage():
 @app.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://telegraam-fileuploader.vercel.app/' + TELEGRAM_BOT_TOKEN)
+    bot.set_webhook(url='https://your-vercel-app-url.vercel.app/' + TELEGRAM_BOT_TOKEN)
     return "!", 200
 
 if __name__ == "__main__":
